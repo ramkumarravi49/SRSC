@@ -17,20 +17,12 @@ repository builds on the official codebase for
 
 **Training entry points**
 * `1_Train.py` — baseline direct training (TET or SDT loss), no spike regularization ("No SR").
-* `2_Train_sr_proxy.py` — differentiable proxy spike-regularization variant.
 * `3.1_Train_sr_physical.py` / `3.2_Train_sr_physical_new.py` — physical spike regularization at a fixed strength from epoch 0 (the collapse ablation); `3.2` adds checkpoint-resume support.
 * `3.3_Train_sr_SpikeCurriculum.py` — SRSC: the accuracy-gated curriculum with a uniform per-layer coefficient.
 * `3.32_Train_sr_SpikeCurriculum_EpochGate.py` — ablation: a fixed-epoch gate in place of the accuracy gate.
 * `3.4_Train_sr_SpikeCurriculum_GradRank.py` — per-layer allocation variants (GR Binary Split, OWL GradProxy).
 * `main_training_distribute.py` — multi-GPU training entry point.
 * `Tune_Parllel.py` — training entry point used for hyperparameter sweeps.
-
-**Checkpoint / log analysis**
-* `4_spikes_TET_layer.py` — layer-wise spike and threshold inference on a trained checkpoint.
-* `aux_inference_T.py` — layer-wise inference swept across multiple values of `T`.
-* `aux2_parse_logs.py` — parses training logs for best test accuracy and NAS, with CSV export.
-* `aux3_spike_sparsity.py` — computes spike sparsity (fraction of always-silent neurons) from a checkpoint.
-* `aux4_wt_sparsity.py` — computes weight sparsity from a checkpoint.
 
 **Data and models**
 * `data_loaders.py` / `data_loaders_qcfs.py` — CIFAR-10/CIFAR-100/DVS-CIFAR10 loaders.
