@@ -16,7 +16,7 @@ from functions import seed_all
 # USER CONFIGURATION — edit these two lists
 # ============================================================
 
-CHECKPOINT_BASE = "/data/cs24m037/TET_LT/CHECKPOINTS"
+CHECKPOINT_BASE = "/path/to/TET_LT/CHECKPOINTS"
 
 CHECKPOINT_FOLDERS = [
     "LT_resnet19_2",
