@@ -27,7 +27,6 @@ repository builds on the official codebase for
 
 **Checkpoint / log analysis**
 * `4_spikes_TET_layer.py` — layer-wise spike and threshold inference on a trained checkpoint.
-* `5_Batch_Infernce.py` — batch inference and summary plots across a set of saved checkpoints (edit `CHECKPOINT_BASE`/`CHECKPOINT_FOLDERS` at the top of the file).
 * `aux_inference_T.py` — layer-wise inference swept across multiple values of `T`.
 * `aux2_parse_logs.py` — parses training logs for best test accuracy and NAS, with CSV export.
 * `aux3_spike_sparsity.py` — computes spike sparsity (fraction of always-silent neurons) from a checkpoint.
